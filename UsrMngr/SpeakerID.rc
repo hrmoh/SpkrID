@@ -1,0 +1,360 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,0,1
+ PRODUCTVERSION 0,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SpeakerID MFC Application\0"
+            VALUE "FileVersion", "0, 0, 0, 1\0"
+            VALUE "InternalName", "SpeakerID\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SpeakerID.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "SpeakerID Application\0"
+            VALUE "ProductVersion", "0, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SPEAKERID_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 191
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_USERINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_USERPASS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SPEAKERID_DIALOG DIALOGEX 0, 0, 198, 210
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Speaker Registeration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,191,58,14
+    PUSHBUTTON      "Cancel",IDCANCEL,75,191,58,14
+    PUSHBUTTON      "Remove",IDC_REMOVEUSER,141,51,50,14,BS_CENTER | 
+                    WS_DISABLED
+    CONTROL         "List1",IDC_USERSLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,19,126,167
+    PUSHBUTTON      "New...",IDC_NEWUSER,141,19,50,14
+    PUSHBUTTON      "Rem. Pass...",IDC_MODIFYUSER,141,35,50,14,WS_DISABLED
+    LTEXT           "Users:",IDC_STATIC,7,7,48,9
+    PUSHBUTTON      "Options...",IDC_OPTIONS,141,69,50,14
+    PUSHBUTTON      "About...",IDC_ABOUT,141,85,50,14
+END
+
+IDD_USERINFO DIALOG DISCARDABLE  0, 0, 186, 121
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add User Or Pass Wizard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Step 1 - Enter User Name",IDC_STATIC,7,7,172,86
+    LTEXT           "User Name:",IDC_STATIC,14,33,39,15
+    COMBOBOX        IDC_NAME,57,32,110,41,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    ICON            "",IDC_MSGICON,21,60,20,20
+    LTEXT           "Enter user name in the edit box and then push next button to proceed.",
+                    IDC_SMSG,53,57,119,30
+    PUSHBUTTON      "&Next",IDOK,101,100,52,14
+    PUSHBUTTON      "Cancel",IDCANCEL,33,100,52,14
+END
+
+IDD_USERPASS DIALOGEX 0, 0, 186, 121
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add User Or Pass Wizard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Step 2 - Record Password",IDC_STEP,7,7,172,86
+    PUSHBUTTON      "Rec&ord",IDC_RECORD,14,23,34,13
+    PUSHBUTTON      "&Play",IDC_PLAY,14,39,52,13,WS_DISABLED
+    CONTROL         "",IDC_OSIL,"Static",SS_BLACKRECT | WS_BORDER,71,23,100,
+                    29
+    PUSHBUTTON      "&Next",IDOK,101,100,52,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,33,100,52,14
+    LTEXT           "At first you should record your passphrase, if no error occures, you can proceed.",
+                    IDC_SMSG,52,57,119,30
+    ICON            "",IDC_SMSGICON,21,60,20,20
+    PUSHBUTTON      "V",IDC_RECDEV,50,22,16,14,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 172, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,158,55
+    LTEXT           "Number of passphrase repetitions: ",IDC_STATIC,13,15,
+                    116,9
+    EDITTEXT        IDC_REPNUM,130,14,26,12,ES_AUTOHSCROLL
+    LTEXT           "Minimum password length(seconds) :",IDC_STATIC,13,29,
+                    116,9
+    EDITTEXT        IDC_MINLEN,130,28,26,12,ES_AUTOHSCROLL
+    LTEXT           "Security Level:",IDC_STATIC,13,45,48,9
+    COMBOBOX        IDC_SECURITY,63,43,93,46,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,30,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,91,69,50,14
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 314, 149
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "This program and all its accompanying materials (programs, activex controls, documentations, ...) are  components of a speaker identification system written by :",
+                    IDC_STATIC,4,17,306,16
+    CTEXT           "Hamid Reza Mohammadi",IDC_ME,107,34,81,9
+    CTEXT           "Under supervision of:",IDC_STATIC,112,42,71,9
+    CTEXT           "Dr. Ahmad Reza Naghsh Nilchi",IDC_DR,95,50,105,9
+    CTEXT           "Based on speech\\speaker recognition library provided by:",
+                    IDC_STATIC,54,58,188,9
+    CTEXT           "Dr. Jialong He",IDC_JHE,129,66,46,9
+    CTEXT           "Some parts of it is created using excellent codes provided by:",
+                    IDC_STATIC,54,74,198,9
+    CTEXT           "Chris Maunder",IDC_CM,199,82,46,8
+    CTEXT           "Francisco Campos",IDC_FC,129,82,62,8
+    CTEXT           "Davide Pizzolato",IDC_DP,67,82,54,8
+    CTEXT           "Thomas Holme",IDC_TH,8,82,50,8
+    LTEXT           ",",IDC_STATIC,60,82,8,8
+    LTEXT           ",",IDC_STATIC,123,82,8,8
+    LTEXT           ",",IDC_STATIC,191,82,8,8
+    CTEXT           "Special thanks to:",IDC_STATIC,122,90,61,9
+    LTEXT           "Dr. Farzin Deravi",IDC_FD,62,98,55,9
+    LTEXT           ",",IDC_STATIC,118,97,8,8
+    LTEXT           "Dr. Judith Markowitz",IDC_JM,126,98,66,9
+    LTEXT           ",",IDC_STATIC,193,98,8,8
+    LTEXT           "Dr. CattyTilton",IDC_CT,201,98,51,8
+    CTEXT           "June - August 2002",IDC_STATIC,122,107,61,9
+    CTEXT           "Isfahan University",IDC_STATIC,122,116,61,9
+    PUSHBUTTON      "Close",IDOK,110,128,86,15
+    LTEXT           ",",IDC_STATIC,249,82,8,8
+    CTEXT           "Sam Blackburn",IDC_SB,257,82,49,8
+    CTEXT           "SpeakerID Version 0.001",IDC_STATIC,116,8,81,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS DLGINIT
+BEGIN
+    IDC_SECURITY, 0x403, 27, 0
+0x6556, 0x7972, 0x4820, 0x6769, 0x2068, 0x6828, 0x7261, 0x2064, 0x6f74, 
+0x6120, 0x6464, 0x7061, 0x2974, "\000" 
+    IDC_SECURITY, 0x403, 5, 0
+0x6948, 0x6867, "\000" 
+    IDC_SECURITY, 0x403, 7, 0
+0x654d, 0x6964, 0x6d75, "\000" 
+    IDC_SECURITY, 0x403, 4, 0
+0x6f4c, 0x0077, 
+    IDC_SECURITY, 0x403, 50, 0
+0x6556, 0x7972, 0x4c20, 0x776f, 0x2820, 0x6165, 0x7973, 0x7420, 0x206f, 
+0x6461, 0x7061, 0x2074, 0x7562, 0x2074, 0x6977, 0x6874, 0x6d20, 0x726f, 
+0x2065, 0x7265, 0x6f72, 0x2072, 0x6172, 0x6574, 0x0029, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MSGRECORD           "Record your passphrase, if no error occures, you can proceed."
+    IDS_MSGNOMATCH          "New recorded phrase doesn't match the first. Please record another."
+    IDS_MSGINVALIDNAME      "\nInvalid user name."
+    IDS_MSGNAME             "Enter user name in the edit box or select it from list to add a passphrase."
+    IDS_MSGTOOSHORT         "Your passphrase is too short!"
+    IDS_MSGPICK             "Confirm the passphrase which you want to remove."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Unknown language: 0x1, 0x1 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ARA)
+#ifdef _WIN32
+LANGUAGE 0x1, 0x1
+#pragma code_page(1256)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SpeakerID.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\SpeakerID.ico"
+#endif    // Unknown language: 0x1, 0x1 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\SpeakerID.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
